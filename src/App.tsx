@@ -74,7 +74,7 @@ function App() {
  * @param setPosts A function to update the posts state variable
  */
 const fetchSubPosts = async (sub: string, topRange: string, count: number, setPosts: Function, showError: Function) => {
-    const request = new Request(`http://127.0.0.1:5000/sub/${sub}?top=${topRange}&count=${count}`, {method: 'GET'});
+    const request = new Request(`https://reddit-challenge-backend.herokuapp.com/sub/${sub}?top=${topRange}&count=${count}`, {method: 'GET'});
     // now fetch results from the subreddit endpoint
     const res = await fetch(request);
     if (!res.ok) {
